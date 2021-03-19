@@ -87,7 +87,35 @@ const game = () => {
     
 
     return (
-        <div className={styles.App}>
+        <div className={styles.wrapper}>
+        
+        <section className={styles.boxes}>
+        <div className={styles.box}>
+            
+            <h3>Player One :  {player.player1}</h3>
+            <p>Move: {player.player1Select}</p>
+            <p>Total Match: 5</p>
+            <p>Total Win: {player.winCount1}</p>
+            <p>Match no: {player.winCount1 + player.winCount2}</p>
+            <p>Point: {player.player1Point} </p>
+            <p>Turn : {board.turn === "O" ? "Player One" : ""}</p>
+           
+        </div>
+        <div className={styles.box}>
+            
+            <h3>player Two : {player.player2}</h3>
+            <p>Move: {player.player2Select}</p>
+            <p>Total Match: 5</p>
+            <p>Total Win: {player.winCount2}</p>
+            <p>Match no: {player.winCount1 + player.winCount2}</p>
+            <p>Point: {player.player2Point} </p>
+            <p>Turn : {board.turn === "X" ? "Player Two" : ""}</p>
+           
+        </div>
+        
+    </section>
+        
+        <br/>
         <div className={styles.board}>
           <div className={styles.row}>
           <Square
