@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import styles from '../../styles/Naming.module.css';
 import { useSelector, useDispatch } from "react-redux";
 import { playerOne, playerTwo } from "../actions";
 
@@ -18,25 +18,34 @@ const NamingPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <form onSubmit={onSubmit}>
-        <input
-          defaultValue={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          placeholder="Player1 Name"
-          type="text"
-          name="firstName"
-          required
-        />
-        <input
-          defaultValue={secondName}
-          onChange={(e) => setSecondName(e.target.value)}
-          placeholder="Player2 Name"
-          type="text"
-          name="secondName"
-          required
-        />
-        <input type ="submit" value="Submit" />
+        <h1>Tic Tac Toe</h1>
+        <div className="form-group">
+            <label htmlFor="">Player One</label>
+            <input 
+            defaultValue={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="Player1 Name"
+            name="firstName"
+            type="text" 
+            className={styles.formControl} 
+            required
+            />
+        </div>
+
+        <div className="form-group">
+            <label htmlFor="">Player Two</label>
+            <input 
+              defaultValue={secondName}
+              onChange={(e) => setSecondName(e.target.value)}
+              placeholder="Player2 Name"
+              name="secondName"
+              type="text" 
+              className={styles.formControl} 
+              required/>
+        </div>
+        <input type="submit" className={styles.btn} value="Submit"/>
       </form>
     </div>
   );

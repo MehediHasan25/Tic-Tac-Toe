@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useEffect} from 'react';
 import styles from '../styles/Game.module.css';
 import { useSelector, useDispatch } from "react-redux";
 import Square from '../app/components/Square';
