@@ -78,11 +78,11 @@ const playerReducer = (state = initialState, action) => {
       };
 
     case "REFRESH_POINT":
-      return{
+      return {
         ...state,
-        player1Point:0,
-        player2Point:0
-      }
+        player1Point: 0,
+        player2Point: 0,
+      };
 
     default:
       return state;

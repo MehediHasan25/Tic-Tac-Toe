@@ -103,22 +103,16 @@ export const winCountRefresh = () => {
   };
 };
 
-
 export const storeData = (data) => {
-
   return {
     type: "STORE_DATA",
-    payload: data
+    payload: data,
   };
 };
-
-
 
 export const refreshPlayerPoint = () => {
-
   return {
     type: "REFRESH_POINT",
-    payload: 0
+    payload: 0,
   };
 };
-

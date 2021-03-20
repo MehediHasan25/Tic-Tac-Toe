@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import styles from "../styles/History.module.css";
 
 function history() {
@@ -8,42 +8,46 @@ function history() {
   let newHistory = [].concat(...historyData);
   const router = useRouter();
 
-
-  const moveHome =(e) =>{
-      e.preventDefault();
-      router.push('/');
-  }
+  const moveHome = (e) => {
+    e.preventDefault();
+    router.push("/");
+  };
 
   return (
-      <div>
+    <div>
       <h1 className="header">History Page</h1>
-    <table className={styles.styledTable}>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      {newHistory.map((history, i) => (
-        <tbody key={i}>
-          <tr key={i}>
-            <td>{history.name}</td>
-            <td>{history.point}</td>
+      <table className={styles.styledTable}>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Points</th>
           </tr>
-        </tbody>
-      ))}
-    </table>
- <br/> 
- <br/> 
-    <div className={styles.buttons}>
-            <div className={styles.actionButton}>
-            <button name="submit" className={styles.actionButton} type="submit" onClick={moveHome} value="Save" >Home Page</button>
-            <p id="saved"></p>
-
-            </div>
-
+        </thead>
+        {newHistory.map((history, i) => (
+          <tbody key={i}>
+            <tr key={i}>
+              <td>{history.name}</td>
+              <td>{history.point}</td>
+            </tr>
+          </tbody>
+        ))}
+      </table>
+      <br />
+      <br />
+      <div className={styles.buttons}>
+        <div className={styles.actionButton}>
+          <button
+            name="submit"
+            className={styles.actionButton}
+            type="submit"
+            onClick={moveHome}
+            value="Save"
+          >
+            Home Page
+          </button>
+          <p id="saved"></p>
         </div>
-
+      </div>
     </div>
   );
 }

@@ -1,71 +1,70 @@
 .styledTable {
-    margin-left: 50%;
-    transform: translateX(50%);
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 50%;
+  transform: translateX(50%);
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .styledTable thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
 }
 
 .styledTable th,
 .styledTable td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 
 .styledTable tbody tr {
-    border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 .styledTable tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .styledTable tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #009879;
 }
 
 .styledTable tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
+  font-weight: bold;
+  color: #009879;
 }
 
 .buttons {
-    width: 200px;
-    margin: 0 auto;
-    display: inline;
-}
-    
-.actionButton {
-    margin-left: 40%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 34px;
-    border:none;
-    outline: none;
-    background: #27a322;
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    color:white;
-    border-radius:  4px;
-    transition: .3s;
-    
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
 }
 
-.header{
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 34px;
-    text-align: center;
-    margin-bottom: 24px;
-    color:#27a322;
+.actionButton {
+  margin-left: 40%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 34px;
+  border: none;
+  outline: none;
+  background: #27a322;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.header {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 34px;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #27a322;
 }
