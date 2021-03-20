@@ -1,4 +1,6 @@
 .styledTable {
+    margin-left: 50%;
+    transform: translateX(50%);
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -42,9 +44,28 @@
 }
     
 .actionButton {
-    width: 200px;
-    margin: 0 auto;
-    display: inline;
+    margin-left: 40%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 34px;
+    border:none;
+    outline: none;
     background: #27a322;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
     color:white;
+    border-radius:  4px;
+    transition: .3s;
+    
+}
+
+.header{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 34px;
+    text-align: center;
+    margin-bottom: 24px;
+    color:#27a322;
 }

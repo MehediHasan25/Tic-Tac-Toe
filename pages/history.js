@@ -16,6 +16,7 @@ function history() {
 
   return (
       <div>
+      <h1 className="header">History Page</h1>
     <table className={styles.styledTable}>
       <thead>
         <tr>

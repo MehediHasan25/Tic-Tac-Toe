@@ -15,7 +15,8 @@ import {
   winCountRefresh,
   player1Lost,
   player2Lost,
-  storeData
+  storeData,
+  refreshPlayerPoint
 } from "../app/actions";
 
 const game = () => {
@@ -98,11 +99,13 @@ const game = () => {
 
   const onPlayAgain = e =>{
     e.preventDefault();
+    dispatch(refreshPlayerPoint());
     router.push('/');
   }
 
   const onHistory = e =>{
     e.preventDefault();
+    dispatch(refreshPlayerPoint());
     router.push('/history');
   }
 

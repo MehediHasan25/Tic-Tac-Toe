@@ -112,3 +112,13 @@ export const storeData = (data) => {
   };
 };
 
+
+
+export const refreshPlayerPoint = () => {
+
+  return {
+    type: "REFRESH_POINT",
+    payload: 0
+  };
+};
+

@@ -1,8 +1,10 @@
 import App from 'next/app';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
 import {createWrapper} from 'next-redux-wrapper';
-import store from '../app/store';
+import {store,persistor} from '../app/store';
+
 
 
 class MyApp extends App{
@@ -10,7 +12,9 @@ class MyApp extends App{
     const {Component, pageProps} = this.props
       return (
         <Provider store = {store}>
-        <Component {...pageProps}></Component>
+          <PersistGate persistor={persistor}>
+            <Component {...pageProps}></Component>
+          </PersistGate>
         </Provider>
         )
   }
