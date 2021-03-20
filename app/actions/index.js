@@ -104,11 +104,11 @@ export const winCountRefresh = () => {
 };
 
 
-export const storeData = (data1, data2) => {
+export const storeData = (data) => {
+
   return {
     type: "STORE_DATA",
-    payload1: data1,
-    payload2:data2
+    payload: data
   };
 };
 

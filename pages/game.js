@@ -15,6 +15,7 @@ import {
   winCountRefresh,
   player1Lost,
   player2Lost,
+  storeData
 } from "../app/actions";
 
 const game = () => {
@@ -23,10 +24,9 @@ const game = () => {
   
   const {winCount1} = useSelector((state) => state.players);
   const {winCount2} = useSelector((state) => state.players);
-  const router = useRouter()
-    const [win1, setWin1] = useState(0);
-  // const [win2, setwin2] = useState(0);
-  // const [winner, setWinner] = useState([]);
+  const router = useRouter();
+  const [list1, setList1] = useState([]);
+  
 
   const dispatch = useDispatch();
 
@@ -83,7 +83,14 @@ const game = () => {
       }
 
         if ((winCount1 + winCount2)  === 4) {
-            dispatch(winCountRefresh()); 
+          let data1 ={name:`${player.player1}`, point:`${player.player1Point}`};
+          let data2 ={name:`${player.player2}`, point:`${player.player2Point}`};
+          // console.log(data1);
+          // console.log(data2);
+          setList1(list1.push(data1));
+          setList1(list1.push(data2));
+          dispatch(storeData(list1));
+          dispatch(winCountRefresh()); 
         }
         
       }
@@ -93,6 +100,11 @@ const game = () => {
   const onPlayAgain = e =>{
     e.preventDefault();
     router.push('/');
+  }
+
+  const onHistory = e =>{
+    e.preventDefault();
+    router.push('/history');
   }
 
   return (
@@ -119,6 +131,8 @@ const game = () => {
       </section>
       
      <button  onClick={onPlayAgain} className={styles.btn}>Home Page</button>
+     <br/> <br/>
+     <button  onClick={onHistory} className={styles.btn}>History</button>
         
       <br /> <br />
       <div className={styles.board}>

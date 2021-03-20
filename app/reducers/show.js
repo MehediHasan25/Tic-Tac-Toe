@@ -10,7 +10,7 @@ const showReducer = (state = initialState, action) => {
         case 'STORE_DATA':
             return {
                 ...state,
-                data:[...state.data, action.payload1, action.payload2]
+                data:[...state.data, [].concat(...action.payload)]
               };
         default:
             return state;
