@@ -19,6 +19,11 @@ const NamingPage = () => {
     router.push('/game')
   };
 
+  const moveHistory =(e) =>{
+    e.preventDefault();
+    router.push('/history');
+  }
+
   return (
     <div className={styles.container}>
       <form onSubmit={onSubmit}>
@@ -48,6 +53,8 @@ const NamingPage = () => {
               required/>
         </div>
         <input type="submit" className={styles.btn} value="Submit"/>
+        <br/><br/><br/>
+        <button  onClick={moveHistory} className={styles.btn}>History</button>
       </form>
     </div>
   );

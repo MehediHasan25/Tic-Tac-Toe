@@ -21,7 +21,6 @@ import {
 const game = () => {
   const board = useSelector((state) => state.board);
   const player = useSelector((state) => state.players);
-  
   const {winCount1} = useSelector((state) => state.players);
   const {winCount2} = useSelector((state) => state.players);
   const router = useRouter();
