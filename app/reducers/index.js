@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import playerReducer from './players';
 import boardReducer from './board';
+import showReducer from './show';
 
 
 const allReducers = combineReducers({
     players: playerReducer,
-    board:boardReducer
+    board:boardReducer,
+    show:showReducer
     
   });
   

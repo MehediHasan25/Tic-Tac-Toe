@@ -8,8 +8,8 @@ let initialState = {
   player2Point: 0,
   playersName: [],
   playersPoint: [],
-  winCount1:0,
-  winCount2:0
+  winCount1: 0,
+  winCount2: 0,
 };
 
 const playerReducer = (state = initialState, action) => {
@@ -34,53 +34,48 @@ const playerReducer = (state = initialState, action) => {
         turnPlayer: action.payload,
       };
 
-      case "PLAYER1_COUNT":
+    case "PLAYER1_COUNT":
       return {
         ...state,
-        winCount1: state.winCount1 + action.payload
-       
+        winCount1: state.winCount1 + action.payload,
       };
 
-      case "PLAYER2_COUNT":
-        return {
-          ...state,
-          winCount2: state.winCount2 +action.payload
-          
-        };
+    case "PLAYER2_COUNT":
+      return {
+        ...state,
+        winCount2: state.winCount2 + action.payload,
+      };
 
-        case "PLAYER1_POINT":
-          return {
-            ...state,
-            player1Point: state.player1Point + 2
-          };
+    case "PLAYER1_POINT":
+      return {
+        ...state,
+        player1Point: state.player1Point + 2,
+      };
 
-          case "PLAYER2_POINT":
-          return {
-            ...state,
-            player2Point: state.player2Point + 2
-          };
+    case "PLAYER2_POINT":
+      return {
+        ...state,
+        player2Point: state.player2Point + 2,
+      };
 
-          case "REFRESH_WINCOUNT":
-            return{
-              ...state,
-              winCount1:0,
-              winCount2:0
-            }
+    case "REFRESH_WINCOUNT":
+      return {
+        ...state,
+        winCount1: 0,
+        winCount2: 0,
+      };
 
-          case "PLAYER1_LOST":
-            return{
-              ...state,
-              player1Point: state.player1Point + 1
-            }
+    case "PLAYER1_LOST":
+      return {
+        ...state,
+        player1Point: state.player1Point + 1,
+      };
 
-            case "PLAYER2_LOST":
-            return{
-              ...state,
-              player2Point: state.player2Point + 1
-            }
-
-
-
+    case "PLAYER2_LOST":
+      return {
+        ...state,
+        player2Point: state.player2Point + 1,
+      };
 
     default:
       return state;

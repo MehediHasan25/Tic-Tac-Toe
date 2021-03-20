@@ -7,8 +7,10 @@ import { playerOne, playerTwo } from "../actions";
 const NamingPage = () => {
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
-  const router = useRouter()
+  const router = useRouter();
   const dispatch = useDispatch();
+
+ 
 
   const onSubmit = (e) => {
     e.preventDefault();
